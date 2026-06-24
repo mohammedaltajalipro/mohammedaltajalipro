@@ -21,11 +21,13 @@ while True:
  for round in range(5):
   print("round",round+1)
 
-  user = (input("enter your choice:")).lower()
+  while True:
+    user = input("Enter your choice: ")
 
-  if user not in choice:
-   print("Invalid choice!")
-   continue
+    if user in choice:
+        break
+
+    print("Invalid choice!")
 
   computer = random.choice(choice)
   print("Computer chose:", computer)
@@ -56,7 +58,7 @@ while True:
 
   print("score -->user:",user_score,"computer:",computer_score)
 
- print("final scores")
+ print("\n ==========FINAL SCORES===========")
  print("user_score:",user_score)
  print("computer_score:",computer_score)
 
